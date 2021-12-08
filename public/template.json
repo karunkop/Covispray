@@ -1,0 +1,168 @@
+{
+    "header": {
+        "menu-items": [
+            {
+                "name": "Home",
+                "link-to": "#",
+                "order": 1,
+                "active": true
+            },
+            {
+                "name": "How pirdal works",
+                "link-to": "#how-it-works",
+                "order": 2,
+                "active": false
+            },
+            {
+                "name": "About Pirdal",
+                "link-to": "#about",
+                "order": 3,
+                "active": false
+            },
+            {
+                "name": "Why Pirdal",
+                "link-to": "#why",
+                "order": 4,
+                "active": false
+            },
+            {
+                "name": "Pirdal FAQ",
+                "link-to": "#faq",
+                "order": 5,
+                "active": false
+            }
+        ]
+    },
+    "hero-section": [
+        {
+            "src": "/assets/image1.jpg",
+            "order": "1",
+            "includeCard": true,
+            "cardContent": {
+                "title": {
+                    "name": "Move confidently into the new norm with pridal-nasal-spray",
+                    "highlight": "pridal-nasal-spray"
+                },
+                "description": ""
+            },
+            "button": {
+                "include": true,
+                "text": "Click Here",
+                "link-to": "#"
+            }
+        },
+        {
+            "src": "/assets/image2.jpg",
+            "order": "2",
+            "includeCard": true,
+            "cardContent": {
+                "title": {
+                    "name": "Your nose is the first-entry-gate for viruses and contaminants",
+                    "highlight": "first-entry-gate"
+                },
+                "description": "Eat, travel and work safely out of home with this extra protection Pirdal is able to provide."
+            },
+            "button": {
+                "include": true,
+                "text": "Read more",
+                "link-to": "#"
+            }
+        }
+    ],
+    "video-section-first": "https://www.youtube.com/embed/iWqz-zgCa9I",
+    "are-you-in-this-situations": {
+        "title": "use pridal for better protection.",
+        "sub-title": "Are you in these situations?",
+        "contents": [
+            {
+                "title": "High Risk Environment",
+                "src": "/assets/card1.jpg"
+            },
+            {
+                "title": "Crowded Places",
+                "src": "/assets/card2.jpg"
+            },
+            {
+                "title": "Dining Out",
+                "src": "/assets/card3.jpg"
+            },
+            {
+                "title": "Onset of Cold/Flu like Symptoms",
+                "src": "/assets/card4.jpg"
+            },
+            {
+                "title": "Essential Work",
+                "src": "/assets/card5.jpg"
+            },
+            {
+                "title": "Travel",
+                "src": "/assets/card6.jpg"
+            }
+        ]
+    },
+    "how-infection-begin": {
+        "title": "How infections begin",
+        "contents": [
+            {
+                "title": "Viruses enter into the nose.",
+                "src": "/assets/infection1.png"
+            },
+            {
+                "title": "Viruses attach on the receptors of nasal mucosa.",
+                "src": "/assets/infection2.png"
+            },
+            {
+                "title": "Viruses begin to infect and damage the cell.",
+                "src": "/assets/infection3.png"
+            },
+            {
+                "title": "More viruses begin to damage other cells and trigger infections in the body.",
+                "src": "/assets/infection4.png"
+            }
+        ]
+    },
+    "how-pridal-works": {
+        "title": "How pirdal works",
+        "contents": [
+            {
+                "title": "Filmogen is formed and adheres on nasal mucosa.",
+                "src": "/assets/how1.png"
+            },
+            {
+                "title": "Filmogen acts like an Absorbent to bind viruses and contaminants, preventing them to attach on the mucosa.",
+                "src": "/assets/how2.png"
+            },
+            {
+                "title": "The Filmogen also helps to detach viruses and contaminants (including pro-inflammatory cytokines) found on the mucosa.",
+                "src": "/assets/how3.png"
+            }
+        ],
+        "video": "https://www.youtube.com/embed/YJj_LAtpNBc"
+    },
+    "triple-action": {
+        "src": "/assets/pirdal-logo-2.png",
+        "title": "Triple Action",
+        "side-image": "/assets/spray.png",
+        "contents": [
+            {
+                "title": "Prevention against respiratory infections due to viruses and contaminants.",
+                "src": "/assets/1.png"
+            },
+            {
+                "title": "Treatment of early phase respiratory symptoms.",
+                "src": "/assets/2.png"
+            },
+            {
+                "title": "Protective barrier: protects, cleans and helps to repair the nasal mucosa",
+                "src": "/assets/3.png"
+            }
+        ]
+    },
+    "protection": {
+        "src": "/assets/medicine.png",
+        "title": "PATENTED ANTIVIRAL FILMOGEN FOR",
+        "highlight": "LONG-LASTING PROTECTION",
+        "sideImage": "/assets/protection.png",
+        "bgImage": "/assets/crowd.jfif"
+    }
+}
