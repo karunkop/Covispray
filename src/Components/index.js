@@ -1,12 +1,12 @@
 import tw, { styled } from "twin.macro";
 
-const HeadingStyle = styled.h1(({ primary, normal }) => [
+export const HeadingStyle = styled.h1(({ primary, normal }) => [
     tw` text-3xl text-center  lg:text-5xl uppercase font-bold tracking-wider`,
     primary ? tw`text-primary` : tw`text-white`,
     normal && tw`normal-case`,
 ]);
 
-const Line = tw.div`mx-auto h-0.5 mt-3 md:h-1 lg:h-1 bg-red-500 w-[25%] md:w-[45%] lg:w-[60%]`;
+export const Line = tw.div`mx-auto h-0.5 mt-3 md:h-1 lg:h-1 bg-red-500 w-[25%] md:w-[45%] lg:w-[60%]`;
 
 export const Heading = props => {
     return (
@@ -22,7 +22,9 @@ export const SubHeading = styled(HeadingStyle)(props => [
     props.primary ? tw`text-red-500` : tw`text-black`,
 ]);
 
-const SpanHeadingStyle = tw(HeadingStyle)`display[inline-block]  px-4 bg-red-500 text-white  text-center lg:text-4xl py-2`;
+const SpanHeadingStyle = tw(
+    HeadingStyle
+)`display[inline-block]  px-4 bg-red-500 text-white  text-center lg:text-4xl py-2`;
 
 export const SpanHeading = props => {
     return (
@@ -32,12 +34,17 @@ export const SpanHeading = props => {
     );
 };
 
-const ButtonStyle = tw.a`hover:bg-red-700 rounded-sm uppercase flex justify-center items-center text-white bg-red-500 shadow-md px-1.5 py-1 md:px-2 md:py-1.5  lg:px-3.5 lg:py-2 font-bold tracking-wide`;
+const ButtonStyle = styled.a(({secondary})=> [
+    tw`cursor-pointer hover:bg-red-700 rounded-sm uppercase flex justify-center items-center text-white bg-red-500 shadow-md px-2.5 py-2 md:px-2 md:py-1.5  lg:px-3.5 lg:py-2 font-bold tracking-wide`,
+    secondary && tw`bg-primary hover:bg-blue-900`
+]);
 
 export const Button = props => {
     return (
         <div style={{ display: "inline-block" }}>
-            <ButtonStyle href={props?.to}>{props.children}</ButtonStyle>{" "}
+            <ButtonStyle secondary={props.secondary || false} href={props?.to}>
+                {props.children}
+            </ButtonStyle>{" "}
         </div>
     );
 };
@@ -50,12 +57,12 @@ export const HeroCard = props => {
 
     return (
         <CardStyle>
-            <HeadingStyle normal>
+            <HeadingStyle style={{ textAlign: "start" }} normal>
                 {splittedText.map(text =>
                     splittedHighlightedText.includes(text) ? (
-                        <SpanHeading>{text.replaceAll("-", " ")}</SpanHeading>
+                        <SpanHeading style={{ textAlign: "start" }}>{text.replaceAll("-", " ")}</SpanHeading>
                     ) : (
-                        <span style={{ marginRight: "1px" }}> {text} </span>
+                        <span style={{ marginRight: "1px", textAlign: "start" }}> {text} </span>
                     )
                 )}
             </HeadingStyle>

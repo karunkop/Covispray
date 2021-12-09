@@ -3,6 +3,7 @@
         "menu-items": [
             {
                 "name": "Home",
+                "id": "home",
                 "link-to": "#",
                 "order": 1,
                 "active": true
@@ -10,24 +11,28 @@
             {
                 "name": "How pirdal works",
                 "link-to": "#how-it-works",
+                "id": "how-it-works",
                 "order": 2,
                 "active": false
             },
             {
                 "name": "About Pirdal",
                 "link-to": "#about",
+                "id": "about",
                 "order": 3,
                 "active": false
             },
             {
                 "name": "Why Pirdal",
                 "link-to": "#why",
+                "id": "why",
                 "order": 4,
                 "active": false
             },
             {
                 "name": "Pirdal FAQ",
                 "link-to": "#faq",
+                "id": "faq",
                 "order": 5,
                 "active": false
             }
@@ -43,12 +48,12 @@
                     "name": "Move confidently into the new norm with pridal-nasal-spray",
                     "highlight": "pridal-nasal-spray"
                 },
-                "description": ""
+                "description": "Eat, travel and work safely out of home with this extra protection Pirdal is able to provide."
             },
             "button": {
                 "include": true,
-                "text": "Click Here",
-                "link-to": "#"
+                "text": "Read More",
+                "link-to": "#situations"
             }
         },
         {
@@ -59,13 +64,12 @@
                 "title": {
                     "name": "Your nose is the first-entry-gate for viruses and contaminants",
                     "highlight": "first-entry-gate"
-                },
-                "description": "Eat, travel and work safely out of home with this extra protection Pirdal is able to provide."
+                }
             },
             "button": {
                 "include": true,
                 "text": "Read more",
-                "link-to": "#"
+                "link-to": "#infections"
             }
         }
     ],
@@ -164,5 +168,58 @@
         "highlight": "LONG-LASTING PROTECTION",
         "sideImage": "/assets/protection.png",
         "bgImage": "/assets/crowd.jfif"
+    },
+    "why": {
+        "subTitle": "FILMOGEN ANTIVIRAL BARRIER",
+        "title": "Why Pirdal?",
+        "sideImage": "/assets/why5.png",
+        "buttonText": "Got Questions? See Our Faqs",
+        "contents": [
+            {
+                "title": "Clinically Proven Effectiveness ",
+                "src": "/assets/why1.png",
+                "note": []
+            },
+            {
+                "title": "Up to 4-Hours Long-lasting Protection ",
+                "src": "/assets/why2.png",
+                "note": []
+            },
+            {
+                "title": "Unique, patented formula made from food- and plant-based ingredients ",
+                "src": "/assets/why3.png",
+                "note": ["• Does not contain propellant gas"]
+            },
+            {
+                "title": "Suitable for most individual*",
+                "src": "/assets/why4.png",
+                "note": ["*Please refer to user instructions"]
+            }
+        ]
+    },
+    "faq": {
+        "title": "FREQUENTLY ASKED QUESTIONS",
+        "contents": [
+            {
+                "title": "What is pirdal nasal spray?",
+                "description": "PIRDAL Nasal Spray is a hypertonic polymeric solution that forms an absorbent film (nasal dressing) on the nasal mucosa (the lining inside the nose). This protective film helps to prevent contaminants from coming into contact with the nasal surface. The osmotic properties of PIRDAL Nasal Spray attract hypotonic fluid present in the mucosal tissue, creating a flow of fluid from the interior to the surface. The mechanical mode of action makes it possible to continuously block and detach impurities and other contaminants including viruses present inside the nose and eventually omit them with nasal secretions."
+            },
+            {
+                "title": "What type of contaminants and viruses is PIRDAL Nasal Spray effective against?",
+                "description": "The mechanical mode of action of PIRDAL Nasal Spray makes it possible to detach all types of viruses and contaminants (bacteria, dust, foreign particles) present on the nasal mucosa."
+            },
+            {
+                "title": " Is PIRDAL also effective on virus variants? ",
+                "description": "Yes, virus variants have no impact on the efficacy of PIRDAL because PIRDAL acts by its mechanical mode of action: a patented filmogen barrier that is able trap and detach viruses regardless of variants."
+            },
+            {
+                "title": "How long is the protection period for each application? ",
+                "description": "The filmogen formed on the nasal mucosa is estimated to last approximately 4 hours."
+            },
+            {
+                "title": " How long it takes for the application to start working?",
+                "description": "PIRDAL forms a protective filmogen on the nasal surface upon application. It is fully effective 15 minutes after application."
+            }
+        ]
     }
 }

@@ -3,7 +3,7 @@ import tw, { styled } from "twin.macro";
 import { Heading } from "../Components";
 import Video from "../Components/Video";
 
-const Container = tw.div`px-2.5 py-16  bg-primary lg:py-28`;
+const Container = tw.section`px-2.5 py-16  bg-primary lg:py-28`;
 
 const Header = tw.div`flex items-center justify-center flex-col`;
 

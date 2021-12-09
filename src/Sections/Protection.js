@@ -2,7 +2,7 @@ import React from "react";
 import tw, { styled } from "twin.macro";
 import { Heading, SpanHeading } from "../Components";
 
-const Container = styled.div(({ url }) => [
+const Container = styled.section(({ url }) => [
     url &&
         ` 
         background-image: url(${url});

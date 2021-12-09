@@ -2,7 +2,7 @@ import React from "react";
 import tw, { styled } from "twin.macro";
 import { Heading, SubHeading } from "../Components";
 
-const Container = tw.div`px-2.5 py-16  bg-background lg:py-28`;
+const Container = tw.section`px-2.5 py-16  bg-background lg:py-28`;
 
 const Header = tw.div`flex items-center justify-center flex-col`;
 
@@ -25,7 +25,7 @@ const Content = tw.div`mt-7 lg:mt-11 grid mx-auto gap-14 md:max-w-2xl  md:grid-c
 
 const Situations = ({ title, subTitle, contents }) => {
     return (
-        <Container>
+        <Container id="situations" >
             <Header>
                 <SubHeading primary>{subTitle}</SubHeading>
                 <Heading primary>{title}</Heading>

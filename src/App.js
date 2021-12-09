@@ -12,6 +12,10 @@ import Infections from "./Sections/Infections";
 import How from "./Sections/How";
 import TripleAction from "./Sections/TripleAction";
 import Protection from "./Sections/Protection";
+import Why from "./Sections/Why";
+import FAQ from "./Sections/FAQ";
+import Footer from "./Sections/Footer";
+import GroupedSocialIcons from "./Components/SocialIcons";
 
 function App() {
     const [template, setTemplate] = useState(null);
@@ -22,8 +26,14 @@ function App() {
             .then(result => setTemplate(result));
     }, []);
 
+    const SocialIconsContainer = tw.div`fixed top-1/2 right-0 z-20`;
+
     return template ? (
         <div tw="w-full">
+            {/* <SocialIconsContainer>
+                <GroupedSocialIcons direction="col" />
+            </SocialIconsContainer> */}
+
             <NavBar items={template.header["menu-items"]} />
             <Carousel slides={template["hero-section"]} />
             <Video src={template["video-section-first"]} />
@@ -54,22 +64,15 @@ function App() {
                 bgImage={template["protection"].bgImage}
                 highlight={template["protection"].highlight}
             />
-            <div tw="h-screen bg-white"></div>
-            <div tw="h-screen bg-white"></div>
-            {/* <div tw="text-center bg-primary p-3">
-                <SubHeading primary> test</SubHeading>
-                <Heading> how infection begins</Heading>
-                <SpanHeading> Span </SpanHeading>
-            </div>
-            <br />
-
-            <HeroCard
-                title="Move confidently into the new norm with
-                pirdal-nasal-spray"
-                highlight="pirdal-nasal-spray"
-                description="Eat, travel and work safely out of home with this extra protection Pirdal is able to provide."
-                button={{ text: "Read More...", to: "#" }}
-            /> */}
+            <Why
+                title={template["why"].title}
+                subTitle={template["why"].subTitle}
+                contents={template["why"].contents}
+                sideImage={template["why"].sideImage}
+                buttonText={template["why"].buttonText}
+            />
+            <FAQ title={template["faq"].title} contents={template["faq"].contents} />
+            <Footer />
             <Warning />
         </div>
     ) : (

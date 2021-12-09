@@ -2,7 +2,7 @@ import React from "react";
 import tw, { styled } from "twin.macro";
 import { Heading } from "../Components";
 
-const Container = tw.div`px-2.5 py-16  bg-white lg:py-28`;
+const Container = tw.section`px-2.5 py-16  bg-white lg:py-28`;
 
 const Header = tw.div`flex items-center justify-center flex-col`;
 
@@ -18,7 +18,7 @@ const Card = tw.div`flex items-center  flex-col`;
 
 const Infections = ({ title, contents }) => {
     return (
-        <Container>
+        <Container id="infections">
             <Header>
                 <Heading primary>{title}</Heading>
             </Header>

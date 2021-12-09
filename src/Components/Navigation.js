@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import tw, { styled } from "twin.macro";
 import { Heading } from "./index";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import GroupedSocialIcons from "./SocialIcons";
 
 const Header = tw.header`px-4 mx-auto flex items-center justify-between md:px-12 py-3.5 lg:max-w-7xl lg:py-8`;
 const HeaderWrapper = styled.div(({ show }) => [
@@ -10,14 +11,6 @@ const HeaderWrapper = styled.div(({ show }) => [
     show && tw`shadow-xl`,
     tw`sticky bg-white z-10 top-0 left-0 right-0 transition-all duration-500 max-w-full`,
 ]);
-
-const itemVariants = {
-    closed: {
-        opacity: 0,
-        x: "-100%",
-    },
-    open: { opacity: 1, x: 0 },
-};
 
 const sideVariants = {
     closed: {
@@ -31,12 +24,17 @@ const sideVariants = {
         },
     },
 };
+const itemVariants = {
+    closed: {
+        opacity: 0,
+        x: "-100%",
+    },
+    open: { opacity: 1, x: 0 },
+};
 
 const Menu = styled(motion.div)`
-    ${tw`fixed z-10 left-0 right-0 space-y-8 bg-white p-4 lg:hidden border-t-2 shadow-xl`}
+    ${tw`fixed z-10 left-0 right-0 space-y-8 bg-white  lg:hidden border-t-2 shadow-xl overflow-hidden`}
 `;
-
-
 
 export default function NavBar({ items }) {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -44,10 +42,30 @@ export default function NavBar({ items }) {
     const [scrollPos, setScrollPos] = useState(0);
     const [show, setShow] = useState(true);
 
+    const sections = document.querySelectorAll("section");
+
     const handleScroll = () => {
         const clientRect = document.body.getBoundingClientRect();
         setScrollPos(clientRect.top);
         setShow(clientRect.top > scrollPos);
+
+        // let current = "";
+
+        // sections.forEach(section => {
+        //     const sectionTop = section.offsetTop;
+        //     const sectionHeight = section.clientHeight;
+        //     if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+        //         current = section.getAttribute("id");
+        //     }
+        // });
+        // console.log(current);
+        // items.forEach((item, index) => {
+        //     if (window.pageYOffset === 0) {
+        //         setActiveIndex(0);
+        //         return;
+        //     }
+        //     if (item.id === current) setActiveIndex(index);
+        // });
     };
 
     useEffect(() => {
@@ -123,7 +141,7 @@ export default function NavBar({ items }) {
                     <Menu
                         initial={{ height: 0 }}
                         animate={{
-                            height: "100vh",
+                            height: "max-content",
                             transition: { duration: 0.8 },
                         }}
                         exit={{
@@ -131,29 +149,34 @@ export default function NavBar({ items }) {
                             transition: { delay: 0.2, duration: 0.8 },
                         }}
                     >
-                        <motion.ul
-                            tw="space-y-8 lg:space-y-0 lg:flex lg:justify-center lg:items-center lg:space-x-5"
-                            initial="closed"
-                            animate="open"
-                            exit="closed"
-                            variants={sideVariants}
-                        >
-                            {items.map((item, index) => (
-                                <motion.li variants={itemVariants}>
-                                    <MenuItems
-                                        active={+activeIndex === +index ? true : false}
-                                        onClick={() => {
-                                            setActiveIndex(index);
-                                            cycleOpen();
-                                        }}
-                                        href={item["link-to"]}
-                                        key={item.name}
-                                    >
-                                        {item.name}
-                                    </MenuItems>
-                                </motion.li>
-                            ))}
-                        </motion.ul>
+                        <div style={{ padding: "4rem 3rem 1rem 3rem" }}>
+                            <motion.ul
+                                tw="space-y-8 lg:space-y-0 lg:flex lg:justify-center lg:items-center lg:space-x-5"
+                                initial="closed"
+                                animate="open"
+                                exit="closed"
+                                variants={sideVariants}
+                            >
+                                {items.map((item, index) => (
+                                    <motion.li variants={itemVariants}>
+                                        <MenuItems
+                                            active={+activeIndex === +index ? true : false}
+                                            onClick={() => {
+                                                setActiveIndex(index);
+                                                cycleOpen();
+                                            }}
+                                            href={item["link-to"]}
+                                            key={item.name}
+                                        >
+                                            {item.name}
+                                        </MenuItems>
+                                    </motion.li>
+                                ))}
+                                <motion.div style={{ padding: "0 2rem" }} variants={itemVariants}>
+                                    <GroupedSocialIcons />
+                                </motion.div>
+                            </motion.ul>
+                        </div>
                     </Menu>
                 )}
             </AnimatePresence>
