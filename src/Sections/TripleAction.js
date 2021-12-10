@@ -1,5 +1,5 @@
 import React from "react";
-import tw, { styled } from "twin.macro";
+import tw from "twin.macro";
 import { Heading } from "../Components";
 
 const Container = tw.section`px-2.5 py-16  bg-white lg:py-20`;
@@ -23,13 +23,13 @@ const TripleAction = ({ title, contents, sideImage, logo }) => {
         <Container id="about">
             <Content>
                 <LeftSection>
-                    <Image src={logo} />
+                    <Image src={logo} alt="" />
                     <br />
                     <Heading primary>{title}</Heading>
                     {contents.map((content, index) => {
                         return (
                             <Card key={index}>
-                                <Image style={{ height: "60px", width: "60px" }} src={content.src} />
+                                <Image style={{ height: "60px", width: "60px" }} alt="" src={content.src} />
                                 <Label>
                                     <LabelHeading>{content.title}</LabelHeading>
                                 </Label>

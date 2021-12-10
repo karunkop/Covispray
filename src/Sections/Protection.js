@@ -33,7 +33,7 @@ const Protection = ({ title, highlight, sideImage, bgImage, logo }) => {
                     <RightSection>
                         <Heading>{title}</Heading>
                         <SpanHeading>{highlight}</SpanHeading>
-                        <Image src={sideImage} />
+                        <Image src={sideImage} alt="" />
                     </RightSection>
                 </Content>
             </Overlay>

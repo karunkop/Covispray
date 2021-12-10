@@ -55,10 +55,10 @@ const Footer = () => {
                         </ParagraphWrapper>
                     </Section>
                     <Section>
-                        <Image src="/assets/nepal-logo.png" />
+                        <Image alt="" src="/assets/nepal-logo.png" />
                     </Section>
                     <Section>
-                        <Image src="/assets/qr-code.jpeg" />
+                        <Image alt="" src="/assets/qr-code.jpeg" />
                     </Section>
                 </Content>
             </Container>

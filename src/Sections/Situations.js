@@ -35,7 +35,7 @@ const Situations = ({ title, subTitle, contents }) => {
                 {contents.map((content, index) => {
                     return (
                         <CardStyle key={index}>
-                            <img style={{ height: "auto", width: "100%" }} src={content.src} />
+                            <img style={{ height: "auto", width: "100%" }} alt="" src={content.src} />
                             <Line>
                                 <FirstLine />
                             </Line>

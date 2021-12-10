@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
 import { useState, useEffect } from "react";
-import tw from "twin.macro";
 import "swiper/modules/navigation/navigation.min.css";
 import NavBar from "./Components/Navigation";
 import Carousel from "./Components/Carousel";
@@ -15,7 +14,7 @@ import Protection from "./Sections/Protection";
 import Why from "./Sections/Why";
 import FAQ from "./Sections/FAQ";
 import Footer from "./Sections/Footer";
-import GroupedSocialIcons from "./Components/SocialIcons";
+import Enquiry from "./Sections/Enquiry";
 
 function App() {
     const [template, setTemplate] = useState(null);
@@ -26,14 +25,8 @@ function App() {
             .then(result => setTemplate(result));
     }, []);
 
-    const SocialIconsContainer = tw.div`fixed top-1/2 right-0 z-20`;
-
     return template ? (
         <div tw="w-full">
-            {/* <SocialIconsContainer>
-                <GroupedSocialIcons direction="col" />
-            </SocialIconsContainer> */}
-
             <NavBar items={template.header["menu-items"]} />
             <Carousel slides={template["hero-section"]} />
             <Video src={template["video-section-first"]} />
@@ -72,6 +65,7 @@ function App() {
                 buttonText={template["why"].buttonText}
             />
             <FAQ title={template["faq"].title} contents={template["faq"].contents} />
+            <Enquiry />
             <Footer />
             <Warning />
         </div>

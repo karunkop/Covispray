@@ -1,5 +1,5 @@
 import React from "react";
-import tw, { styled } from "twin.macro";
+import tw  from "twin.macro";
 import { Heading } from "../Components";
 
 const Container = tw.section`px-2.5 py-16  bg-white lg:py-28`;
@@ -27,7 +27,7 @@ const Infections = ({ title, contents }) => {
                 {contents.map((content, index) => {
                     return (
                         <Card key={index}>
-                            <Image src={content.src} />
+                            <Image src={content.src} alt="" />
                             <Label>
                                 <LabelHeading>{content.title}</LabelHeading>
                             </Label>

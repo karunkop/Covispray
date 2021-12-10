@@ -1,5 +1,5 @@
 import React from "react";
-import tw, { styled } from "twin.macro";
+import tw from "twin.macro";
 import { Heading } from "../Components";
 import Video from "../Components/Video";
 
@@ -28,7 +28,7 @@ const How = ({ title, contents, videoSrc }) => {
                 {contents.map((content, index) => {
                     return (
                         <Card key={index}>
-                            <Image src={content.src} />
+                            <Image src={content.src} alt="" />
                             <Label>
                                 <LabelHeading>{content.title}</LabelHeading>
                             </Label>

@@ -18,7 +18,7 @@ module.exports = {
                 primary: "#333366",
                 primaryTransparent: "rgba(51,51,102,0.75)",
                 background: "#D1D4DC",
-                lightBackground: "#EEEEEE",
+                lightBackground: "#E6E6E6",
             },
         },
         colors: {

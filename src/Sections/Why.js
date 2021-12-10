@@ -41,7 +41,7 @@ const Why = ({ title, subTitle, contents, sideImage, buttonText }) => {
                     {contents.map((content, index) => {
                         return (
                             <CardStyle key={index}>
-                                <Image style={{ width: "140px" }} src={content.src} />
+                                <Image style={{ width: "140px" }} src={content.src} alt="" />
                                 <Label>
                                     <LabelHeading>{content.title}</LabelHeading>
                                 </Label>
@@ -55,7 +55,7 @@ const Why = ({ title, subTitle, contents, sideImage, buttonText }) => {
                     })}
                 </LeftSection>
                 <RightSection>
-                    <Image style={{ width: "400px" }} src={sideImage} />
+                    <Image style={{ width: "400px" }} src={sideImage} alt="" />
                 </RightSection>
             </Content>
             <ButtonWrapper>

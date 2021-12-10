@@ -42,7 +42,7 @@ export default function NavBar({ items }) {
     const [scrollPos, setScrollPos] = useState(0);
     const [show, setShow] = useState(true);
 
-    const sections = document.querySelectorAll("section");
+    // const sections = document.querySelectorAll("section");
 
     const handleScroll = () => {
         const clientRect = document.body.getBoundingClientRect();
@@ -66,12 +66,14 @@ export default function NavBar({ items }) {
         //     }
         //     if (item.id === current) setActiveIndex(index);
         // });
+        
     };
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
+        // eslint-disable-next-line 
     }, [scrollPos]);
 
     const MenuItems = styled.a(({ active }) => [
