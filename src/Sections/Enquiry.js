@@ -49,6 +49,7 @@ const validateEmail = email => {
 const Enquiry = () => {
     const [error, setError] = useState({});
     const [showToast, setShowToast] = useState({ state: "", active: false });
+    const [loading, setLoading] = useState(false);
     const handleValidation = data => {
         let temp = {};
         Object.keys(data).forEach(key => {
@@ -74,6 +75,7 @@ const Enquiry = () => {
     };
 
     const handleSubmit = event => {
+        setLoading(true);
         const formData = new FormData(event.currentTarget);
         event.preventDefault();
         const name = formData.get("name");
@@ -89,6 +91,7 @@ const Enquiry = () => {
                             active: true,
                         });
                         document.getElementById("enquiry-form").reset();
+                        setLoading(false);
                     }
                 },
                 () => {
@@ -96,6 +99,7 @@ const Enquiry = () => {
                         state: "error",
                         active: true,
                     });
+                    setLoading(false);
                 }
             );
         }
@@ -153,11 +157,13 @@ const Enquiry = () => {
                     </ColWrapper>
                     <Field>
                         <Label>
-                            message <Mark>*</Mark>
+                            message
                         </Label>
                         <TextArea name="message" rows={6} />
                     </Field>
-                    <Button type="submit">Submit</Button>
+                    <Button disabled={loading} type="submit">
+                        Submit
+                    </Button>
                 </Form>
             </Content>
         </Container>
