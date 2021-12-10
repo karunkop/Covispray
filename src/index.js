@@ -6,9 +6,4 @@ import { init } from "emailjs-com";
 
 init(process.env.REACT_APP_USER_ID);
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
