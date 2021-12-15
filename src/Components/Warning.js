@@ -6,7 +6,7 @@ const ContainerStyle = tw.div`fixed bottom-0 left-0 right-0 w-full text-center b
 const Warning = () => {
     return (
         <ContainerStyle>
-            DISCLAIMER: Please do not use PIRDAL to replace current health protocols such as getting vaccinated, wearing
+            DISCLAIMER: Please do not use COVISPRAY to replace current health protocols such as getting vaccinated, wearing
             proper face masks, good hygiene practices and social distancing.
         </ContainerStyle>
     );

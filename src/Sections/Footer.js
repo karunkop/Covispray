@@ -65,7 +65,7 @@ const Footer = () => {
             <SecondaryContainer>
                 <SecondaryContent>
                     <SecondaryPargaraphWrapper>
-                        <p>© 2021 Pirdal Nasal Spray. All rights reserved by Pharm-D Sdn Bhd.</p>
+                        <p>© 2021 Covispray. All rights reserved by Pharm-D Sdn Bhd.</p>
                         <p>Powered by Kredence Creative Solutions.</p>
                     </SecondaryPargaraphWrapper>
                     <GroupedSocialIcons />
