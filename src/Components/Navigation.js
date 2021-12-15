@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect } from "react";
 import tw, { styled } from "twin.macro";
-import { Heading, HeadingStyle } from "./index";
+import { HeadingStyle } from "./index";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import GroupedSocialIcons from "./SocialIcons";
 
