@@ -9,28 +9,28 @@
                 "active": true
             },
             {
-                "name": "How pirdal works",
+                "name": "How covispray works",
                 "link-to": "#how-it-works",
                 "id": "how-it-works",
                 "order": 2,
                 "active": false
             },
             {
-                "name": "About Pirdal",
+                "name": "About covispray",
                 "link-to": "#about",
                 "id": "about",
                 "order": 3,
                 "active": false
             },
             {
-                "name": "Why Pirdal",
+                "name": "Why covispray",
                 "link-to": "#why",
                 "id": "why",
                 "order": 4,
                 "active": false
             },
             {
-                "name": "Pirdal FAQ",
+                "name": "covispray FAQ",
                 "link-to": "#faq",
                 "id": "faq",
                 "order": 5,
@@ -45,10 +45,10 @@
             "includeCard": true,
             "cardContent": {
                 "title": {
-                    "name": "Move confidently into the new norm with pridal-nasal-spray",
-                    "highlight": "pridal-nasal-spray"
+                    "name": "Move confidently into the new norm with covispray",
+                    "highlight": "covispray"
                 },
-                "description": "Eat, travel and work safely out of home with this extra protection Pirdal is able to provide."
+                "description": "Eat, travel and work safely out of home with this extra protection covispray is able to provide."
             },
             "button": {
                 "include": true,
@@ -126,7 +126,7 @@
         ]
     },
     "how-pridal-works": {
-        "title": "How pirdal works",
+        "title": "How covispray works",
         "contents": [
             {
                 "title": "Filmogen is formed and adheres on nasal mucosa.",
@@ -144,7 +144,7 @@
         "video": "https://www.youtube.com/embed/YJj_LAtpNBc"
     },
     "triple-action": {
-        "src": "/assets/pirdal-logo-2.png",
+        "src": "/assets/covispray_logo.jpg",
         "title": "Triple Action",
         "side-image": "/assets/spray.png",
         "contents": [
@@ -171,7 +171,7 @@
     },
     "why": {
         "subTitle": "FILMOGEN ANTIVIRAL BARRIER",
-        "title": "Why Pirdal?",
+        "title": "Why covispray?",
         "sideImage": "/assets/why5.png",
         "buttonText": "Got Questions? See Our Faqs",
         "contents": [
@@ -201,24 +201,24 @@
         "title": "FREQUENTLY ASKED QUESTIONS",
         "contents": [
             {
-                "title": "What is pirdal nasal spray?",
-                "description": "PIRDAL Nasal Spray is a hypertonic polymeric solution that forms an absorbent film (nasal dressing) on the nasal mucosa (the lining inside the nose). This protective film helps to prevent contaminants from coming into contact with the nasal surface. The osmotic properties of PIRDAL Nasal Spray attract hypotonic fluid present in the mucosal tissue, creating a flow of fluid from the interior to the surface. The mechanical mode of action makes it possible to continuously block and detach impurities and other contaminants including viruses present inside the nose and eventually omit them with nasal secretions."
+                "title": "What is covispray nasal spray?",
+                "description": "Covispray Nasal Spray is a hypertonic polymeric solution that forms an absorbent film (nasal dressing) on the nasal mucosa (the lining inside the nose). This protective film helps to prevent contaminants from coming into contact with the nasal surface. The osmotic properties of covispray Nasal Spray attract hypotonic fluid present in the mucosal tissue, creating a flow of fluid from the interior to the surface. The mechanical mode of action makes it possible to continuously block and detach impurities and other contaminants including viruses present inside the nose and eventually omit them with nasal secretions."
             },
             {
-                "title": "What type of contaminants and viruses is PIRDAL Nasal Spray effective against?",
-                "description": "The mechanical mode of action of PIRDAL Nasal Spray makes it possible to detach all types of viruses and contaminants (bacteria, dust, foreign particles) present on the nasal mucosa."
+                "title": "What type of contaminants and viruses is covispray Nasal Spray effective against?",
+                "description": "The mechanical mode of action of covispray Nasal Spray makes it possible to detach all types of viruses and contaminants (bacteria, dust, foreign particles) present on the nasal mucosa."
             },
             {
-                "title": " Is PIRDAL also effective on virus variants? ",
-                "description": "Yes, virus variants have no impact on the efficacy of PIRDAL because PIRDAL acts by its mechanical mode of action: a patented filmogen barrier that is able trap and detach viruses regardless of variants."
+                "title": " Is covispray also effective on virus variants? ",
+                "description": "Yes, virus variants have no impact on the efficacy of covispray because covispray acts by its mechanical mode of action: a patented filmogen barrier that is able trap and detach viruses regardless of variants."
             },
             {
                 "title": "How long is the protection period for each application? ",
                 "description": "The filmogen formed on the nasal mucosa is estimated to last approximately 4 hours."
             },
             {
-                "title": " How long it takes for the application to start working?",
-                "description": "PIRDAL forms a protective filmogen on the nasal surface upon application. It is fully effective 15 minutes after application."
+                "title": "How long it takes for the application to start working?",
+                "description": "Covispray forms a protective filmogen on the nasal surface upon application. It is fully effective 15 minutes after application."
             }
         ]
     }

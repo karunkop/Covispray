@@ -66,7 +66,7 @@ export const HeroCard = props => {
                     )
                 )}
             </HeadingStyle>
-            <br />
+            {/* <br /> */}
             {props.description ? (
                 <p style={{ color: "white", fontWeight: "bold", fontSize: "18px" }}> {props.description} </p>
             ) : null}

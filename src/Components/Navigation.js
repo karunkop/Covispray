@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect } from "react";
 import tw, { styled } from "twin.macro";
-import { Heading } from "./index";
+import { Heading, HeadingStyle } from "./index";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import GroupedSocialIcons from "./SocialIcons";
 
@@ -66,14 +66,13 @@ export default function NavBar({ items }) {
         //     }
         //     if (item.id === current) setActiveIndex(index);
         // });
-        
     };
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
-        // eslint-disable-next-line 
+        // eslint-disable-next-line
     }, [scrollPos]);
 
     const MenuItems = styled.a(({ active }) => [
@@ -84,7 +83,7 @@ export default function NavBar({ items }) {
     return (
         <HeaderWrapper show={show}>
             <Header>
-                <Heading primary> Logo </Heading>
+                <HeadingStyle primary> Covispray </HeadingStyle>
                 <nav>
                     <button tw="lg:hidden" onClick={cycleOpen}>
                         {open ? (
