@@ -27,7 +27,7 @@ function App() {
 
     return template ? (
         <div tw="w-full">
-            <NavBar items={template.header["menu-items"]} />
+            <NavBar items={template.header["menu-items"]} logo={template.header["logo"]} />
             <Carousel slides={template["hero-section"]} />
             <Video src={template["video-section-first"]} />
             <Situations

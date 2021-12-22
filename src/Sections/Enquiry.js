@@ -5,25 +5,26 @@ import emailjs from "emailjs-com";
 import Toast from "../Components/Toast";
 
 const Container = styled.section`
-    background-image: url('/assets/form.jpg');
+    background-image: url("/assets/form1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;, 
-    ${tw`px-2.5 py-8 lg:py-28`};
+    background-size: cover;
 `;
+
+const Overlay = tw.div`px-2.5 py-8 lg:py-28  bg-secondaryTransparent`;
 
 const Header = tw.div`flex items-center justify-center flex-col`;
 
 const Content = tw.div` px-6 grid items-center mx-auto  md:max-w-2xl xl:grid-cols-2 xl:max-w-7xl`;
 
 const Input = styled.input(({ err }) => [
-    tw`my-1 border-0 shadow-sm rounded-sm bg-white py-2.5 px-2.5 outline-none w-full`,
+    tw`my-1 border-0 shadow-sm rounded-sm bg-lightBackground py-2.5 px-2.5 outline-none w-full`,
     err && tw`border-l-4 border-red-600`,
 ]);
 
-const TextArea = tw.textarea`my-1  border-0 shadow-lg rounded-sm bg-white py-2.5 px-2.5 outline-none w-full`;
+const TextArea = tw.textarea`my-1  border-0 shadow-lg rounded-sm bg-lightBackground py-2.5 px-2.5 outline-none w-full`;
 
-const Label = tw.h6`uppercase text-primary tracking-wider text-sm font-extrabold`;
+const Label = tw.h6`uppercase text-background tracking-wider text-sm font-extrabold`;
 
 const Form = tw.form`space-y-3.5`;
 
@@ -106,66 +107,66 @@ const Enquiry = () => {
     };
     return (
         <Container id="enquiry">
-            <Toast
-                isVisible={showToast.active}
-                toggle={setShowToast}
-                duration={3000}
-                content="Your Enquiry Has Been Submitted Successfully"
-                success={showToast.state === "success" ? true : false}
-                error={showToast.state === "error" ? true : false}
-            />
-            <Header>
-                <Heading primary>Enquiry Form</Heading>
-                <SubHeading
-                    style={{
-                        fontSize: "14px",
-                        letterSpacing: "1px",
-                        fontWeight: "800",
-                        color: "black",
-                        textTransform: "capitalize",
-                    }}
-                    primary
-                >
-                    Fill up the form below and we will get back to you as soon as possible.
-                </SubHeading>
-            </Header>
-            <Content>
-                <Form id="enquiry-form" onSubmit={handleSubmit}>
-                    <Field>
-                        <Label>
-                            name <Mark>*</Mark>
-                        </Label>
-                        <Input err={error["name"] ? true : false} name="name" />
-                        {error["name"] && <Error> {error.name} </Error>}
-                    </Field>
-                    <ColWrapper>
+            <Overlay>
+                <Toast
+                    isVisible={showToast.active}
+                    toggle={setShowToast}
+                    duration={3000}
+                    content="Your Enquiry Has Been Submitted Successfully"
+                    success={showToast.state === "success" ? true : false}
+                    error={showToast.state === "error" ? true : false}
+                />
+                <Header>
+                    <Heading>Enquiry Form</Heading>
+                    <SubHeading
+                        style={{
+                            fontSize: "14px",
+                            letterSpacing: "1px",
+                            fontWeight: "800",
+                            color: "white",
+                            textTransform: "capitalize",
+                        }}
+                        primary
+                    >
+                        Fill up the form below and we will get back to you as soon as possible.
+                    </SubHeading>
+                </Header>
+                <Content>
+                    <Form id="enquiry-form" onSubmit={handleSubmit}>
                         <Field>
                             <Label>
-                                email <Mark>*</Mark>
+                                name <Mark>*</Mark>
                             </Label>
-                            <Input err={error["email"] ? true : false} name="email" />
-                            {error["email"] && <Error> {error.email} </Error>}
+                            <Input err={error["name"] ? true : false} name="name" />
+                            {error["name"] && <Error> {error.name} </Error>}
                         </Field>
+                        <ColWrapper>
+                            <Field>
+                                <Label>
+                                    email <Mark>*</Mark>
+                                </Label>
+                                <Input err={error["email"] ? true : false} name="email" />
+                                {error["email"] && <Error> {error.email} </Error>}
+                            </Field>
 
+                            <Field>
+                                <Label>
+                                    phone <Mark>*</Mark>
+                                </Label>
+                                <Input err={error["phone"] ? true : false} name="phone" />
+                                {error["phone"] && <Error> {error.phone} </Error>}
+                            </Field>
+                        </ColWrapper>
                         <Field>
-                            <Label>
-                                phone <Mark>*</Mark>
-                            </Label>
-                            <Input err={error["phone"] ? true : false} name="phone" />
-                            {error["phone"] && <Error> {error.phone} </Error>}
+                            <Label>message</Label>
+                            <TextArea name="message" rows={6} />
                         </Field>
-                    </ColWrapper>
-                    <Field>
-                        <Label>
-                            message
-                        </Label>
-                        <TextArea name="message" rows={6} />
-                    </Field>
-                    <Button disabled={loading} type="submit">
-                        Submit
-                    </Button>
-                </Form>
-            </Content>
+                        <Button disabled={loading} type="submit">
+                            Submit
+                        </Button>
+                    </Form>
+                </Content>
+            </Overlay>
         </Container>
     );
 };

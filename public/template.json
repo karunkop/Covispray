@@ -36,7 +36,8 @@
                 "order": 5,
                 "active": false
             }
-        ]
+        ],
+        "logo": "/assets/covispray_logo.jpg"
     },
     "hero-section": [
         {

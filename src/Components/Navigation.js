@@ -1,16 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect } from "react";
 import tw, { styled } from "twin.macro";
-import { HeadingStyle } from "./index";
+// import { HeadingStyle } from "./index";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import GroupedSocialIcons from "./SocialIcons";
 
-const Header = tw.header`px-4 mx-auto flex items-center justify-between md:px-12 py-3.5 lg:max-w-7xl lg:py-8`;
+const Header = tw.header`px-4 mx-auto flex items-center justify-between md:px-12 py-3.5 lg:max-w-[100rem] lg:py-2`;
 const HeaderWrapper = styled.div(({ show }) => [
     show ? `transform: translateY(0);` : ` transform: translateY(-100%);`,
     show && tw`shadow-xl`,
     tw`sticky bg-white z-10 top-0 left-0 right-0 transition-all duration-500 max-w-full`,
 ]);
+
+const Image = tw.img`h-auto w-[160px] lg:w-[230px]`;
 
 const sideVariants = {
     closed: {
@@ -36,7 +38,9 @@ const Menu = styled(motion.div)`
     ${tw`fixed z-10 left-0 right-0 space-y-8 bg-white  lg:hidden border-t-2 shadow-xl overflow-hidden`}
 `;
 
-export default function NavBar({ items }) {
+const Icons = tw.div`xs:hidden xl:block`;
+
+export default function NavBar({ items, logo }) {
     const [activeIndex, setActiveIndex] = useState(0);
     const [open, cycleOpen] = useCycle(false, true);
     const [scrollPos, setScrollPos] = useState(0);
@@ -83,9 +87,12 @@ export default function NavBar({ items }) {
     return (
         <HeaderWrapper show={show}>
             <Header>
-                <HeadingStyle primary> Covispray </HeadingStyle>
+                {/* <HeadingStyle primary> Covispray </HeadingStyle>
+                 */}
+                <Image src={logo} alt="" />
+
                 <nav>
-                    <button tw="lg:hidden" onClick={cycleOpen}>
+                    <button tw="xl:hidden" onClick={cycleOpen}>
                         {open ? (
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +126,7 @@ export default function NavBar({ items }) {
                         )}
                     </button>
 
-                    <ul tw="xs:hidden lg:flex justify-center items-center space-x-3">
+                    <ul tw="xs:hidden xl:flex justify-center items-center space-x-3">
                         {items.map((item, index) => (
                             <li>
                                 <MenuItems
@@ -136,6 +143,9 @@ export default function NavBar({ items }) {
                         ))}
                     </ul>
                 </nav>
+                <Icons>
+                    <GroupedSocialIcons />
+                </Icons>
             </Header>
             <AnimatePresence>
                 {open && (
@@ -152,7 +162,7 @@ export default function NavBar({ items }) {
                     >
                         <div style={{ padding: "4rem 3rem 1rem 3rem" }}>
                             <motion.ul
-                                tw="space-y-8 lg:space-y-0 lg:flex lg:justify-center lg:items-center lg:space-x-5"
+                                tw="space-y-8 xl:space-y-0 xl:flex xl:justify-center xl:items-center xl:space-x-5"
                                 initial="closed"
                                 animate="open"
                                 exit="closed"

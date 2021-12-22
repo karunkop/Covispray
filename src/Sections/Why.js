@@ -17,13 +17,13 @@ const Label = tw.div`flex items-center justify-center py-8`;
 
 const LabelHeading = tw.h1`font-extrabold capitalize tracking-wider text-white text-center text-lg lg:font-size[28px] lg:leading-10`;
 
-const Content = tw.div`mt-7 grid gap-11 mx-auto xl:grid-cols-3 xl:max-w-7xl`;
+const Content = tw.div`mt-7 grid gap-11 mx-auto xl:grid-cols-2 xl:max-w-7xl`;
 
 const Image = tw.img`h-auto w-full`;
 
 const LeftSection = tw.aside`grid px-4  gap-8 lg:grid-cols-2 xl:col-span-2 `;
 
-const RightSection = tw.aside`grid justify-center items-center xl:justify-start`;
+// const RightSection = tw.aside`grid justify-center items-center xl:justify-start`;
 
 const ButtonWrapper = tw.div`text-center mt-5 lg:mt-10`;
 
@@ -54,9 +54,9 @@ const Why = ({ title, subTitle, contents, sideImage, buttonText }) => {
                         );
                     })}
                 </LeftSection>
-                <RightSection>
+                {/* <RightSection>
                     <Image style={{ width: "400px" }} src={sideImage} alt="" />
-                </RightSection>
+                </RightSection> */}
             </Content>
             <ButtonWrapper>
                 <Button to="#faq" secondary>{buttonText}</Button>

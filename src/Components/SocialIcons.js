@@ -8,7 +8,7 @@ const SocialIcons = styled.img(({ direction }) => [
     &:hover {
         transform: scale(1.2) translateX(-10px);
     }`,
-    tw`h-auto xs:w-[30px] md:w-[40px] lg:w-[45px]`,
+    tw`h-auto xs:w-[30px] md:w-[40px] lg:w-[38px] xl:w-[40px]`,
 ]);
 
 const SocialLinks = styled.a``;
