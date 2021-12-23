@@ -85,19 +85,19 @@
             },
             {
                 "title": "Crowded Places",
-                "src": "/assets/card2.jpg"
-            },
-            {
-                "title": "Dining Out",
                 "src": "/assets/card3.jpg"
             },
             {
+                "title": "Dining Out",
+                "src": "/assets/card5.jpg"
+            },
+            {
                 "title": "Onset of Cold/Flu like Symptoms",
-                "src": "/assets/card4.jpg"
+                "src": "/assets/card2.jpg"
             },
             {
                 "title": "Essential Work",
-                "src": "/assets/card5.jpg"
+                "src": "/assets/card4.jpg"
             },
             {
                 "title": "Travel",
