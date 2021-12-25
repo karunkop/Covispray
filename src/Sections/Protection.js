@@ -28,7 +28,7 @@ const Protection = ({ title, highlight, sideImage, bgImage, logo }) => {
             <Overlay>
                 <Content>
                     <LeftSection>
-                        <Image style={{ height: "auto", width: "600px" }} src={logo} />
+                        <Image style={{ height: "auto", width: "100%" }} src={logo} />
                     </LeftSection>
                     <RightSection>
                         <Heading>{title}</Heading>
